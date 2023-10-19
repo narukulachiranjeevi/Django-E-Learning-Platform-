@@ -7,4 +7,5 @@ urlpatterns = [
     path('accounts/login/',auth_views.LoginView.as_view(),name='login'),
     path('admin/', admin.site.urls),
     path('course/',include('courses.urls')),
+
 ]
