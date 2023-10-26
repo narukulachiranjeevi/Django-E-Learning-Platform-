@@ -61,6 +61,7 @@ class ManageCourseView(ListView):
         return qs.filter(owner = self.request.user)
 
 class CourseModuleUpdateView(TemplateResponseMixin,View):
+    print('inside')
     template_name =  'courses/manage/module/formset.html'
     course = None
 
@@ -86,7 +87,10 @@ class CourseModuleUpdateView(TemplateResponseMixin,View):
         })
 
 class ContentCreateUpdateView(TemplateResponseMixin,View):
-    module , model, obj = None, None, None
+    module = None
+    model = None 
+    obj = None
+    print('inside')
     template_name =  'courses/manage/content/form.html'
 
     def get_model(self,model_name):
@@ -190,3 +194,5 @@ class CourseDetailView(DetailView):
 
 
 
+
+#ContentCreateUpdateView
